@@ -1,7 +1,11 @@
 #include <pgmspace.h>
 
 #define SECRET
+#define SSID "your wifi ssid"
+#define PASSWORD "your wifi passoword"
+
 #define THINGNAME "ESP32_LIGHT" // change this
+
 
 const char AWS_IOT_ENDPOINT[] = "a1ujz06l179gqq-ats.iot.ap-south-1.amazonaws.com"; // change this
 

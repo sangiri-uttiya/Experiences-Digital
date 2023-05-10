@@ -5,11 +5,8 @@
 #include <WiFiClientSecure.h>
 #include <PubSubClient.h>
 
-const char *ssid = "OnePlus 6";
-const char *password = "alphanumero1";
-
-#define AWS_IOT_PUBLISH_TOPIC "esp32/pub"
-#define AWS_IOT_SUBSCRIBE_TOPIC "esp32/rec"
+#define AWS_IOT_PUBLISH_TOPIC "esp32_pub"
+#define AWS_IOT_SUBSCRIBE_TOPIC "esp32_rec"
 
 WiFiClientSecure net = WiFiClientSecure();
 PubSubClient client(net);
@@ -30,7 +27,7 @@ void messageHandler(char *topic, byte *payload, unsigned int length)
 void connectAWS()
 {
     WiFi.mode(WIFI_STA);
-    WiFi.begin(SSID, PASSWORD);
+    WiFi.begin(SSID,PASSWORD);
 
     Serial.println("Connecting to Wi-Fi");
 
